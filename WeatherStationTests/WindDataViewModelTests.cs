@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Threading.Tasks;
 using WeatherApp.ViewModels;
 using Xunit;
 
@@ -29,9 +30,11 @@ namespace WeatherStationTests
         {
             // Arrange
 
-            // Act       
+            // Act
+            double actual = _sut.MPStoKPH(mps);
 
             // Assert
+            Assert.Equal(expected, actual);
 
             /// TODO : git commit -a -m "T01 MPStoKPH_AlwaysReturnGoodValue : Done"
         }
