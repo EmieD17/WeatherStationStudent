@@ -34,5 +34,13 @@ namespace WeatherApp.ViewModels
             return mps;
         }
 
+        public bool CanGetData()
+        {
+            if (WindDataService == null)
+                return false;
+            else
+                return true;
+        }
+
     }
 }

@@ -91,10 +91,13 @@ namespace WeatherStationTests
         public void CanGetData_WhenServiceIsNull_ReturnsFalse()
         {
             // Arrange
+            var expected = false;
 
             // Act       
+            var actual = _sut.CanGetData();
 
             // Assert
+            Assert.Equal(expected, actual);
 
             /// TODO : git commit -a -m "T04 CanGetData_WhenServiceIsNull_ReturnsFalse : Done"
         }
