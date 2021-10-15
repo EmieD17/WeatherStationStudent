@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WeatherApp.Commands;
+using WeatherApp.Models;
+using WeatherApp.Services;
 
 namespace WeatherApp.ViewModels
 {
@@ -8,6 +11,13 @@ namespace WeatherApp.ViewModels
     {
         /// TODO : Ajoutez le code nécessaire pour réussir les tests et répondre aux requis du projet
         /// 
+
+        public IWindDataService WindDataService;
+
+        public DelegateCommand<string> GetDataCommand { get; set; }
+        public WindDataModel CurrantData { get; set; }
+
+
         public double MPStoKPH(double mps)
         {
             double kph = mps * 3600 / 1000;
@@ -23,5 +33,6 @@ namespace WeatherApp.ViewModels
 
             return mps;
         }
+
     }
 }

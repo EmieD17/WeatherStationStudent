@@ -73,10 +73,12 @@ namespace WeatherStationTests
         public void GetDataCommand_ExecuteIfNullService_ShouldThrowNullException()
         {
             // Arrange
+            var actual = _sut.GetDataCommand;
 
             // Act       
 
             // Assert
+            Assert.Throws<NullReferenceException>(() => actual.Execute(_sut.WindDataService));
 
             /// TODO : git commit -a -m "T03 GetDataCommand_ExecuteIfNullService_ShouldThrowNullException : Done"
         }
