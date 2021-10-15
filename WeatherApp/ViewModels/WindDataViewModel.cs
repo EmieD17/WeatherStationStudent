@@ -17,6 +17,10 @@ namespace WeatherApp.ViewModels
         public DelegateCommand<string> GetDataCommand { get; set; }
         public WindDataModel CurrantData { get; set; }
 
+        public void SetWindDataService(IWindDataService wds)
+        {
+            WindDataService = wds;
+        }
 
         public double MPStoKPH(double mps)
         {
