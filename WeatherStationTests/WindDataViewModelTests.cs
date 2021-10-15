@@ -131,10 +131,14 @@ namespace WeatherStationTests
         public void SetWindDataService_WhenExecuted_WindDataServiceIsNotNull()
         {
             // Arrange
+            OpenWeatherService OWS = new OpenWeatherService();
 
             // Act       
+            _sut.SetWindDataService(OWS);
+            var actual = _sut.WindDataService;
 
             // Assert
+            Assert.NotNull(actual);
 
             /// TODO : git commit -a -m "T06 SetWindDataService_WhenExecuted_WindDataServiceIsNotNull : Done"
         }
